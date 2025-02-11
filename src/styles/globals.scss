@@ -1,0 +1,46 @@
+body {
+  font-size: 16px;
+  min-height: 100vh;
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  &.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.icon,
+.icon svg,
+.icon path {
+  fill: var(--text-color);
+  color: var(--text-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.icon:hover {
+  color: var(--accent-color);
+  svg,
+  path {
+    fill: var(--accent-color);
+  }
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--accent-color);
+}

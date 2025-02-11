@@ -1,0 +1,21 @@
+.burger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  svg {
+    width: 35px;
+    height: 35px;
+    line {
+      stroke: var(--text-color);
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover line {
+      stroke: var(--accent-color);
+    }
+  }
+}
