@@ -1,12 +1,13 @@
 <script lang="ts">
   import "./ProjectGrid.scss";
   import { onMount } from "svelte";
-  import Button from "../../components/Button/Button.svelte";
   import type { Project } from "./ProjectGrid.model";
+  import Pagination from "../../components/Pagination/Pagination.svelte";
 
+  let currentPage = 1;
+  const itemsPerPage = 6;
   let projects: Project[] = [];
-  let currentPage: number = 1;
-  const itemsPerPage: number = 6;
+  let paginatedProjects: Project[] = [];
 
   onMount(() => {
     projects = Array.from({ length: 25 }, (_, i) => ({
@@ -15,27 +16,24 @@
       description: `Description of project ${i + 1}`,
       image: "https://placehold.co/600x400",
     }));
+    updatePaginatedProjects();
   });
 
-  const totalPages = (): number => Math.ceil(projects.length / itemsPerPage);
-
-  const paginatedProjects = (): Project[] => {
+  function updatePaginatedProjects() {
     const start = (currentPage - 1) * itemsPerPage;
-    return projects.slice(start, start + itemsPerPage);
-  };
+    paginatedProjects = projects.slice(start, start + itemsPerPage);
+  }
 
-  const nextPage = (): void => {
-    if (currentPage < totalPages()) currentPage++;
-  };
-
-  const previousPage = (): void => {
-    if (currentPage > 1) currentPage--;
-  };
+  function handlePageChange(page: number) {
+    currentPage = page;
+    updatePaginatedProjects();
+  }
 </script>
 
-{#if projects.length > 0}
+{#if paginatedProjects.length > 0}
+  <!-- Change condition to check paginatedProjects -->
   <div class="project-grid">
-    {#each paginatedProjects() as project}
+    {#each paginatedProjects as project}
       <div class="project-card">
         <img src={project.image} alt={project.title} />
         <h3>{project.title}</h3>
@@ -44,15 +42,7 @@
     {/each}
   </div>
 
-  <div class="pagination">
-    <Button onClick={previousPage} isDisabled={currentPage === 1}
-      >Previous</Button
-    >
-    <span>Page {currentPage} of {totalPages()}</span>
-    <Button onClick={nextPage} isDisabled={currentPage === totalPages()}
-      >Next</Button
-    >
-  </div>
+  <Pagination {itemsPerPage} items={projects} onPageChange={handlePageChange} />
 {:else}
   <p>No projects to display</p>
 {/if}

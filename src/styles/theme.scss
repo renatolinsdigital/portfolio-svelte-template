@@ -4,10 +4,12 @@
   /* Branding */
   --primary-dark: #d13400;
   --primary-default: #f35100;
+  --primary-light: #fb8951;
 
   --secondary-dark: #002b9a;
   --secondary-default: #0a4fe3;
   --secondary-darkest: #00237c;
+  --secondary-light: #4e86ff;
 
   --tertiary-dark: #c58605;
   --tertiary-default: #f5b300;
@@ -19,6 +21,7 @@
   --gray-1: #fcfcfc;
   --gray-2: #ececec;
   --gray-3: #c3c3c3;
+  --gray-4: #9d9aab;
   --gray-soft: #eaebf3;
   --gray-bluish: #ced1e9;
   --gray-bluish-strong: #d4d6e8;
@@ -40,11 +43,13 @@ body {
   --link-color: var(--primary-default);
   --link-color-hover: var(--primary-dark);
 
-  --button-color: var(--secondary-darkest);
-  --button-color-hover: var(--dark);
-  --button-background-color: var(--gray-bluish);
-  --button-background-color-hover: var(--gray-bluish-strong);
-  --button-disabled-color: var(--gray-bluish-strong);
+  --button-color: var(--dark);
+  --button-color-hover: var(--secondary-darkest);
+  --button-background-color: var(--gray-bluish-strong);
+  --button-background-color-hover: var(--gray-bluish);
+
+  --button-disabled-color: var(--gray-4);
+  --button-disabled-background-color: var(--gray-bluish-strong);
 
   --container-background-color: var(--gray-soft);
   --container-background-color-alternative: var(--gray-bluish-strong);
@@ -61,7 +66,9 @@ body.dark {
   --button-color-hover: var(--gray-bluish-strong);
   --button-background-color: var(--primary-default);
   --button-background-color-hover: var(--primary-dark);
-  --button-disabled-color: var(--gray-bluish-strong);
+
+  --button-disabled-color: var(--gray-2);
+  --button-disabled-background-color: var(--primary-light);
 
   --container-background-color: var(--secondary-dark);
   --container-background-color-alternative: var(--secondary-darkest);
