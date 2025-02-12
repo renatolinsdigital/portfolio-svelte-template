@@ -2,14 +2,10 @@
   gap: 0.5rem;
   display: flex;
   padding: 1.5rem;
+  margin-top: auto;
   align-items: center;
   justify-content: center;
   background: var(--container-background-color);
-  margin-top: auto;
-
-  p {
-    font-size: 0.9rem;
-  }
 
   .social-links {
     gap: 1rem;

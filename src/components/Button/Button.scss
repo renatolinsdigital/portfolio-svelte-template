@@ -3,8 +3,8 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 1.2rem;
-  border-radius: 0.4rem;
   padding: 0.8rem 1rem;
+  border-radius: 0.4rem;
   transition: all 0.2s ease;
   color: var(--button-color);
   background-color: var(--button-background-color);
@@ -34,5 +34,20 @@
     &:hover {
       color: var(--link-color-hover);
     }
+  }
+  &.min-width-90 {
+    min-width: 90px;
+  }
+  &.min-width-120 {
+    min-width: 120px;
+  }
+  &.min-width-150 {
+    min-width: 150px;
+  }
+  &.min-width-180 {
+    min-width: 180px;
+  }
+  &.min-width-220 {
+    min-width: 220px;
   }
 }

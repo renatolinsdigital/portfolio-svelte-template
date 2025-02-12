@@ -1,0 +1,22 @@
+.project-card {
+  padding: 1rem;
+  align-self: start;
+  text-align: center;
+  justify-self: start;
+  border-radius: 8px;
+  background: var(--container-background-color-alternative);
+  box-shadow: 0 2px 4px rgba(0, 0, 50, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 3px 6px rgba(0, 0, 50, 0.15);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 0.4rem;
+  }
+}

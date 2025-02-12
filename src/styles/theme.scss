@@ -2,17 +2,23 @@
 
 :root {
   /* Branding */
+  --primary-darkest: #ad2b00;
   --primary-dark: #d13400;
   --primary-default: #f35100;
   --primary-light: #fb8951;
+  --primary-lightest: #f7c1a6;
 
+  --secondary-darkest: #00237c;
   --secondary-dark: #002b9a;
   --secondary-default: #0a4fe3;
-  --secondary-darkest: #00237c;
   --secondary-light: #4e86ff;
+  --secondary-lightest: #7aa1f6;
 
+  --tertiary-darkest: #906000;
   --tertiary-dark: #c58605;
   --tertiary-default: #f5b300;
+  --tertiary-light: #f5c950;
+  --tertiary-lightest: #fedb79;
 
   /* Neutrals */
   --white: #fff;
@@ -23,8 +29,10 @@
   --gray-3: #c3c3c3;
   --gray-4: #9d9aab;
   --gray-soft: #eaebf3;
+  --gray-medium: #e2e3ed;
   --gray-bluish: #ced1e9;
   --gray-bluish-strong: #d4d6e8;
+  --gray-bluish-stronger: #898ebd;
   --transparent: transparent;
 
   /* Semantic */
@@ -39,6 +47,10 @@
 
 body {
   --text-color: var(--dark);
+  --text-primary-variation-color: var(--primary-dark);
+  --text-secondary-variation-color: var(--secondary-dark);
+  --text-tertiary-variation-color: var(--tertiary-dark);
+  --text-low-contrast-variation-color: var(--gray-bluish-stronger);
 
   --link-color: var(--primary-default);
   --link-color-hover: var(--primary-dark);
@@ -52,15 +64,19 @@ body {
   --button-disabled-background-color: var(--gray-bluish-strong);
 
   --container-background-color: var(--gray-soft);
-  --container-background-color-alternative: var(--gray-bluish-strong);
+  --container-background-color-alternative: var(--gray-medium);
 }
 
 /* Dark */
 body.dark {
   --text-color: var(--gray-soft);
+  --text-primary-variation-color: var(--primary-lightest);
+  --text-secondary-variation-color: var(--secondary-lightest);
+  --text-tertiary-variation-color: var(--tertiary-lightest);
+  --text-low-contrast-variation-color: var(--secondary-light);
 
-  --link-color: var(--gray-bluish);
-  --link-color-hover: var(--white);
+  --link-color: var(--white);
+  --link-color-hover: var(--primary-light);
 
   --button-color: var(--gray-bluish);
   --button-color-hover: var(--gray-bluish-strong);

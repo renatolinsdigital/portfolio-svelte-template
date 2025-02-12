@@ -1,8 +1,10 @@
 <script lang="ts">
   import "./ProjectGrid.scss";
   import { onMount } from "svelte";
-  import type { Project } from "./ProjectGrid.model";
+  import Text from "../../components/Text/Text.svelte";
+  import type { Project } from "../../domain/models/Project.model";
   import Pagination from "../../components/Pagination/Pagination.svelte";
+  import ProjectCard from "../../components/ProjectCard/ProjectCard.svelte";
 
   let currentPage = 1;
   const itemsPerPage = 6;
@@ -31,18 +33,18 @@
 </script>
 
 {#if paginatedProjects.length > 0}
-  <!-- Change condition to check paginatedProjects -->
   <div class="project-grid">
     {#each paginatedProjects as project}
-      <div class="project-card">
-        <img src={project.image} alt={project.title} />
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
-      </div>
+      <ProjectCard {project} />
     {/each}
   </div>
-
-  <Pagination {itemsPerPage} items={projects} onPageChange={handlePageChange} />
+  {#if projects.length > itemsPerPage}
+    <Pagination
+      {itemsPerPage}
+      items={projects}
+      onPageChange={handlePageChange}
+    />
+  {/if}
 {:else}
-  <p>No projects to display</p>
+  <Text fontSizeName="huge">No projects to display</Text>
 {/if}

@@ -1,5 +1,6 @@
 <script lang="ts">
   import "./Footer.scss";
+  import Text from "../Text/Text.svelte";
   import { fade } from "svelte/transition";
   import GitHub from "../../icons/GitHub.svelte";
   import LinkedIn from "../../icons/LinkedIn.svelte";
@@ -8,10 +9,10 @@
 </script>
 
 <footer class="footer-container" transition:fade={{ duration: 300 }}>
-  <p>© {year} Portfolio Website Template</p>
-  <p class="separator">-</p>
-  <p>
-    Made with Svelte by
+  <Text variation="low-contrast">© {year} Portfolio Website Template</Text>
+  <Text customClass="separator" variation="low-contrast">-</Text>
+  <Text variation="low-contrast">
+    No projects to display Made with Svelte by
     <a
       href="https://www.linkedin.com/in/renatolinsdigital/"
       target="_blank"
@@ -19,7 +20,7 @@
     >
       Renato Lins
     </a>
-  </p>
+  </Text>
 
   <div class="social-links">
     <a

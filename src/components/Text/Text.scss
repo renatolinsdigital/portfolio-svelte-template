@@ -1,0 +1,18 @@
+.text {
+  color: var(--text-color);
+  &.bold {
+    font-weight: bold;
+  }
+  &.primary {
+    color: var(--text-primary-variation-color);
+  }
+  &.secondary {
+    color: var(--text-secondary-variation-color);
+  }
+  &.tertiary {
+    color: var(--text-tertiary-variation-color);
+  }
+  &.low-contrast {
+    color: var(--text-low-contrast-variation-color);
+  }
+}

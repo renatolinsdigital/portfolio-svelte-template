@@ -1,6 +1,7 @@
 <script lang="ts">
   import "./Pagination.scss";
   import Button from "../../components/Button/Button.svelte";
+  import Text from "../Text/Text.svelte";
 
   let currentPage = 1;
   const visibleGoToPages = 3;
@@ -10,6 +11,16 @@
   export let onPageChange: (page: number) => void;
 
   $: totalPages = Math.ceil(items.length / itemsPerPage);
+
+  $: hasPagesLeft =
+    hasMorePagesVisible &&
+    totalPages > visibleGoToPages &&
+    currentPage > Math.ceil(visibleGoToPages / 2);
+
+  $: hasPagesRight =
+    hasMorePagesVisible &&
+    totalPages > visibleGoToPages &&
+    currentPage < totalPages - Math.floor(visibleGoToPages / 2);
 
   const changePage = (page: number) => {
     if (page >= 1 && page <= totalPages) {
@@ -31,24 +42,28 @@
 
 <div class="pagination">
   <Button
+    minWidth="120"
     onClick={() => changePage(currentPage - 1)}
     isDisabled={currentPage === 1}>Previous</Button
   >
-  <span>Page {currentPage} of {totalPages}</span>
+  <Text tag="span">Page {currentPage} of {totalPages}</Text>
   <Button
+    minWidth="120"
     onClick={() => changePage(currentPage + 1)}
     isDisabled={currentPage === totalPages}>Next</Button
   >
 
-  {#if hasMorePagesVisible && totalPages > visibleGoToPages && currentPage > Math.ceil(visibleGoToPages / 2)}
-    <span>...</span>
-  {/if}
+  <Text tag="span" customClass={`view-more ${hasPagesLeft ? "visible" : ""}`}>
+    ...</Text
+  >
+
   {#each getVisiblePages() as page}
     <Button onClick={() => changePage(page)} isDisabled={currentPage === page}
       >{page}</Button
     >
   {/each}
-  {#if hasMorePagesVisible && totalPages > visibleGoToPages && currentPage < totalPages - Math.floor(visibleGoToPages / 2)}
-    <span>...</span>
-  {/if}
+
+  <Text tag="span" customClass={`view-more ${hasPagesRight ? "visible" : ""}`}>
+    ...
+  </Text>
 </div>
