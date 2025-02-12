@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import "./Header.scss";
   import { onDestroy } from "svelte";
   import Modal from "../Modal/Modal.svelte";
@@ -15,7 +15,10 @@
     isMenuOpen = !isMenuOpen;
   };
 
-  const handleResize = () => (isMobile = window.innerWidth < 768);
+  const handleResize = () => {
+    isMobile = window.innerWidth < 768;
+  };
+
   window.addEventListener("resize", handleResize);
 </script>
 

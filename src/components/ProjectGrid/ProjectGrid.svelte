@@ -1,11 +1,12 @@
-<script>
+<script lang="ts">
   import "./ProjectGrid.scss";
   import { onMount } from "svelte";
   import Button from "../Button/Button.svelte";
+  import type { Project } from "./ProjectGrid.model";
 
-  let projects = [];
-  let currentPage = 1;
-  const itemsPerPage = 6;
+  let projects: Project[] = [];
+  let currentPage: number = 1;
+  const itemsPerPage: number = 6;
 
   onMount(() => {
     projects = Array.from({ length: 25 }, (_, i) => ({
@@ -18,23 +19,20 @@
     currentPage = projects.length > 0 ? 1 : 0;
   });
 
-  function totalPages() {
-    return Math.ceil(projects.length / itemsPerPage);
-  }
+  const totalPages = (): number => Math.ceil(projects.length / itemsPerPage);
 
-  function paginatedProjects() {
-    if (projects.length === 0) return [];
+  const paginatedProjects = (): Project[] => {
     const start = (currentPage - 1) * itemsPerPage;
     return projects.slice(start, start + itemsPerPage);
-  }
+  };
 
-  function nextPage() {
+  const nextPage = (): void => {
     if (currentPage < totalPages()) currentPage++;
-  }
+  };
 
-  function previousPage() {
+  const previousPage = (): void => {
     if (currentPage > 1) currentPage--;
-  }
+  };
 </script>
 
 {#if projects.length > 0}

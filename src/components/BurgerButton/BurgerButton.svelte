@@ -1,8 +1,8 @@
-<script>
-  export let onClick;
+<script lang="ts">
+  export let onClick: () => void;
   import "./BurgerButton.scss";
 
-  const strokeWidth = 4;
+  const strokeWidth: number = 4;
 </script>
 
 <button

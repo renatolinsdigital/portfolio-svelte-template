@@ -1,7 +1,6 @@
 header {
   width: 100%;
   display: flex;
-  position: relative;
   align-items: center;
   flex-direction: column;
   padding: 2rem 1rem 1rem;
@@ -19,7 +18,7 @@ header {
 
     .logo {
       width: 60px;
-      transition: transform 0.2s ease-in-out;
+      transition: transform 0.2s;
 
       &:hover {
         transform: scale(1.1);
@@ -35,7 +34,6 @@ header {
 
   .header-message {
     font-size: 1.2rem;
-    text-align: center;
     color: var(--secondary-color);
   }
 }
@@ -43,7 +41,6 @@ header {
 @media (max-width: 768px) {
   .header-content {
     gap: 0.8rem;
-    text-align: center;
     flex-direction: column;
   }
 }

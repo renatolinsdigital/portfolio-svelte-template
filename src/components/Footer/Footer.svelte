@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import "./Footer.scss";
   import { fade } from "svelte/transition";
   import GitHub from "../../icons/GitHub.svelte";

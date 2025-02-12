@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
   import "./Modal.scss";
   import { fade } from "svelte/transition";
   import { onMount, onDestroy } from "svelte";
 
-  export let onIsOpenToggle;
   export let isMobile = false;
+  export let onIsOpenToggle: () => void;
 
   onMount(() => {
     document.body.classList.add("no-scroll");

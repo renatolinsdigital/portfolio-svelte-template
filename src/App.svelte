@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import "./app.scss";
   import Footer from "./components/Footer/Footer.svelte";
   import Header from "./components/Header/Header.svelte";

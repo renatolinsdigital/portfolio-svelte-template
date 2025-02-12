@@ -16,16 +16,21 @@
       }
     }
   }
+
   &.mobile {
     width: 100%;
+    background-color: var(--background-color);
 
     ul {
       width: 100%;
       font-size: 1.5rem;
       flex-direction: column;
+      padding: 1rem;
     }
+
     li {
       margin: 0.5rem auto;
+      text-align: center;
     }
   }
 }

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import "./Navigation.scss";
   export let isMobile = false;
 </script>
