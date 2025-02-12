@@ -6,20 +6,20 @@
     justify-content: center;
 
     a {
-      color: var(--secondary-color);
       font-weight: bold;
       text-decoration: none;
       transition: color 0.2s;
+      color: var(--link-color);
 
       &:hover {
-        color: var(--accent-color);
+        color: var(--link-color-hover);
       }
     }
   }
 
   &.mobile {
     width: 100%;
-    background-color: var(--background-color);
+    background-color: var(--container-background-color);
 
     ul {
       width: 100%;

@@ -1,7 +1,7 @@
 <script lang="ts">
   import "./ProjectGrid.scss";
   import { onMount } from "svelte";
-  import Button from "../Button/Button.svelte";
+  import Button from "../../components/Button/Button.svelte";
   import type { Project } from "./ProjectGrid.model";
 
   let projects: Project[] = [];
@@ -15,8 +15,6 @@
       description: `Description of project ${i + 1}`,
       image: "https://placehold.co/600x400",
     }));
-
-    currentPage = projects.length > 0 ? 1 : 0;
   });
 
   const totalPages = (): number => Math.ceil(projects.length / itemsPerPage);
@@ -55,4 +53,6 @@
       >Next</Button
     >
   </div>
+{:else}
+  <p>No projects to display</p>
 {/if}

@@ -18,28 +18,14 @@
     min-height: 250px;
     text-align: center;
     border-radius: 0.5rem;
-    background: var(--background-color);
+    background: var(--container-background-color);
     transition: transform 0.2s ease-in-out;
     box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.3);
 
     .modal-header {
       display: flex;
       justify-content: flex-end;
-      padding: 0.4rem 1rem;
-      background-color: var(--background-dark-color);
-
-      .close-btn {
-        border: none;
-        cursor: pointer;
-        font-size: 2rem;
-        background: none;
-        transition: color 0.2s;
-        color: var(--text-color);
-
-        &:hover {
-          color: var(--accent-color);
-        }
-      }
+      background-color: var(--container-background-color-alternative);
     }
 
     .modal-body {

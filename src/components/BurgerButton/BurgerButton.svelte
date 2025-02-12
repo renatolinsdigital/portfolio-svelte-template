@@ -6,8 +6,8 @@
 </script>
 
 <button
-  class="burger-menu"
   on:click={onClick}
+  class="burger-button"
   aria-label="Open navigation menu"
 >
   <svg

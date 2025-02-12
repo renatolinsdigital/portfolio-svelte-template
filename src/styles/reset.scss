@@ -2,6 +2,12 @@
 
 /* Structure/Layout */
 
+#app {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
 *,
 *:before,
 *:after {
@@ -13,7 +19,6 @@
   text-decoration: none;
   box-sizing: border-box;
   vertical-align: baseline;
-  transition: all 0.2s ease;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }

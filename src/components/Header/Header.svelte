@@ -3,6 +3,7 @@
   import { onDestroy } from "svelte";
   import Modal from "../Modal/Modal.svelte";
   import svelteLogo from "../../images/svelte.svg";
+  import DarkToggle from "../DarkToggle/DarkToggle.svelte";
   import Navigation from "../Navigation/Navigation.svelte";
   import BurgerButton from "../BurgerButton/BurgerButton.svelte";
 
@@ -22,14 +23,14 @@
   window.addEventListener("resize", handleResize);
 </script>
 
-<header>
+<header class="header">
   {#if !isMobile}
     <Navigation {isMobile} />
   {/if}
 
   <div class="header-content">
     <img src={svelteLogo} class="logo" alt="Svelte Logo" />
-    <h1>Hi, I'm John Doe</h1>
+    <h1>Hi, I'm John Doe <DarkToggle /></h1>
   </div>
 
   <div class="header-message">

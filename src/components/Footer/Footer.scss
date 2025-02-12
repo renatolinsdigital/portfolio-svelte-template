@@ -4,11 +4,11 @@
   padding: 1.5rem;
   align-items: center;
   justify-content: center;
-  background: var(--background-dark-color);
+  background: var(--container-background-color);
+  margin-top: auto;
 
   p {
     font-size: 0.9rem;
-    color: var(--secondary-color);
   }
 
   .social-links {

@@ -2,6 +2,7 @@
   import "./Modal.scss";
   import { fade } from "svelte/transition";
   import { onMount, onDestroy } from "svelte";
+  import Button from "../Button/Button.svelte";
 
   export let isMobile = false;
   export let onIsOpenToggle: () => void;
@@ -24,13 +25,13 @@
 >
   <div class="modal-content" on:click|stopPropagation>
     <div class="modal-header">
-      <button
-        class="close-btn"
-        on:click={onIsOpenToggle}
-        aria-label="Close navigation menu"
+      <Button
+        variant="transparent"
+        onClick={onIsOpenToggle}
+        ariaLabel="Close navigation menu"
       >
-        &times;
-      </button>
+        &#10006;
+      </Button>
     </div>
     <div class="modal-body">
       <slot></slot>

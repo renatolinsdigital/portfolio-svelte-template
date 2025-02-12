@@ -1,4 +1,4 @@
-.burger-menu {
+.burger-button {
   background: none;
   border: none;
   cursor: pointer;
@@ -10,12 +10,12 @@
     width: 35px;
     height: 35px;
     line {
-      stroke: var(--text-color);
+      stroke: var(--link-color);
       transition: all 0.2s ease-in-out;
     }
 
     &:hover line {
-      stroke: var(--accent-color);
+      stroke: var(--link-color-hover);
     }
   }
 }

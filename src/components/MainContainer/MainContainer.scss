@@ -1,0 +1,10 @@
+.main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--container-background-color);
+  // background-color: red;
+  min-height: 100%;
+}

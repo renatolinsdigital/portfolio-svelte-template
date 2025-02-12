@@ -3,18 +3,11 @@ body {
   min-height: 100vh;
   color: var(--text-color);
   font-family: Arial, sans-serif;
-  background-color: var(--background-color);
+  background-color: var(--container-background-color);
   &.no-scroll {
     overflow: hidden;
     height: 100vh;
   }
-}
-
-main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: flex-start;
 }
 
 .icon,
@@ -26,10 +19,10 @@ main {
 }
 
 .icon:hover {
-  color: var(--accent-color);
+  color: var(--dark);
   svg,
   path {
-    fill: var(--accent-color);
+    fill: var(--dark);
   }
 }
 
@@ -42,5 +35,5 @@ a:active {
 }
 
 a:hover {
-  color: var(--accent-color);
+  color: var(--dark);
 }
