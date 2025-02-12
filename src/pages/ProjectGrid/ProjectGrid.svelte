@@ -1,10 +1,10 @@
 <script lang="ts">
   import "./ProjectGrid.scss";
   import { onMount } from "svelte";
-  import Text from "../../components/Text/Text.svelte";
+  import Text from "../../shared/components/Text/Text.svelte";
   import type { Project } from "../../domain/models/Project.model";
-  import Pagination from "../../components/Pagination/Pagination.svelte";
-  import ProjectCard from "../../components/ProjectCard/ProjectCard.svelte";
+  import Pagination from "../../shared/components/Pagination/Pagination.svelte";
+  import ProjectCard from "../../domain/components/ProjectCard/ProjectCard.svelte";
 
   let currentPage = 1;
   const itemsPerPage = 6;

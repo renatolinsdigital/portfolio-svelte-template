@@ -8,11 +8,11 @@
   --primary-light: #fb8951;
   --primary-lightest: #f7c1a6;
 
-  --secondary-darkest: #00237c;
+  --secondary-darkest: #001c61;
   --secondary-dark: #002b9a;
   --secondary-default: #0a4fe3;
   --secondary-light: #4e86ff;
-  --secondary-lightest: #7aa1f6;
+  --secondary-lightest: #84a9fb;
 
   --tertiary-darkest: #906000;
   --tertiary-dark: #c58605;
@@ -70,7 +70,7 @@ body {
 /* Dark */
 body.dark {
   --text-color: var(--gray-soft);
-  --text-primary-variation-color: var(--primary-lightest);
+  --text-primary-variation-color: var(--primary-light);
   --text-secondary-variation-color: var(--secondary-lightest);
   --text-tertiary-variation-color: var(--tertiary-lightest);
   --text-low-contrast-variation-color: var(--secondary-light);

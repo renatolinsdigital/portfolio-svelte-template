@@ -1,9 +1,9 @@
 <script lang="ts">
   import "./Footer.scss";
-  import Text from "../Text/Text.svelte";
+  import Text from "../../../shared/components/Text/Text.svelte";
   import { fade } from "svelte/transition";
-  import GitHub from "../../icons/GitHub.svelte";
-  import LinkedIn from "../../icons/LinkedIn.svelte";
+  import GitHub from "../../../icons/GitHub.svelte";
+  import LinkedIn from "../../../icons/LinkedIn.svelte";
 
   export let year = new Date().getFullYear();
 </script>

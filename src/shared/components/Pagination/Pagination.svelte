@@ -1,6 +1,6 @@
 <script lang="ts">
   import "./Pagination.scss";
-  import Button from "../../components/Button/Button.svelte";
+  import Button from "../Button/Button.svelte";
   import Text from "../Text/Text.svelte";
 
   let currentPage = 1;
