@@ -33,6 +33,6 @@ To build the project, you can run npm run build. To host the project you can use
 
 you can create pages in wordpress and consume them via projects such as this one. So you can add calls to headless CMS APIS so you can manage website data more efficiently
 Create yourself a backend that provide dynamic data to this website
-Update the language to Typescript
+Update the language to Typescript (Only the Button component is using typescript as it enable variant options)
 Add a state management solutions such as redux or mobx
 Add login so you can manage project via the /admin route for example

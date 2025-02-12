@@ -1,6 +1,7 @@
 <script>
   import "./ProjectGrid.scss";
   import { onMount } from "svelte";
+  import Button from "../Button/Button.svelte";
 
   let projects = [];
   let currentPage = 1;
@@ -31,7 +32,7 @@
     if (currentPage < totalPages()) currentPage++;
   }
 
-  function prevPage() {
+  function previousPage() {
     if (currentPage > 1) currentPage--;
   }
 </script>
@@ -48,10 +49,12 @@
   </div>
 
   <div class="pagination">
-    <button on:click={prevPage} disabled={currentPage === 1}>Previous</button>
+    <Button onClick={previousPage} isDisabled={currentPage === 1}
+      >Previous</Button
+    >
     <span>Page {currentPage} of {totalPages()}</span>
-    <button on:click={nextPage} disabled={currentPage === totalPages()}
-      >Next</button
+    <Button onClick={nextPage} isDisabled={currentPage === totalPages()}
+      >Next</Button
     >
   </div>
 {/if}
