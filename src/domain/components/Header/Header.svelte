@@ -1,10 +1,12 @@
 <script lang="ts">
   import "./Header.scss";
+  import { fade } from "svelte/transition";
   import svelteLogo from "../../../images/svelte.svg";
   import { device } from "../../../stores/deviceStore";
-  import Text from "../../../shared/components/Text/Text.svelte";
   import DarkToggle from "../DarkToggle/DarkToggle.svelte";
   import Navigation from "../Navigation/Navigation.svelte";
+  import Text from "../../../shared/components/Text/Text.svelte";
+  import Link from "../../../shared/components/Link/Link.svelte";
   import Modal from "../../../shared/components/Modal/Modal.svelte";
   import BurgerButton from "../../../shared/components/BurgerButton/BurgerButton.svelte";
 
@@ -16,20 +18,28 @@
   };
 </script>
 
-<header class="header">
+<header class="header-container">
   {#if !isMobile}
-    <Navigation {isMobile} />
+    <Navigation />
   {/if}
 
-  <div class="header-content">
-    <img src={svelteLogo} class="logo" alt="Svelte Logo" />
-    <Text tag="h1" fontSizeName="biggest" margin={{ left: "1rem" }} isBold
-      >Hi, I'm John Doe <DarkToggle />
+  <div class="header-content" transition:fade={{ duration: 300 }}>
+    <Link href="#"
+      ><img
+        alt="Logo"
+        class="logo"
+        src={svelteLogo}
+        class:mobile={isMobile}
+      /></Link
+    >
+    <Text tag="h1" fontSizeName="jumbo" margin={{ left: "1rem" }} isBold
+      >Hi, I'm John Doe
+      <DarkToggle />
     </Text>
   </div>
 
-  <div class="header-message">
-    <Text tag="h3" fontSizeName="extraLarge"
+  <div class="header-message" transition:fade={{ duration: 2000 }}>
+    <Text tag="h3" fontSizeName="large"
       >Check out the projects I've been working on</Text
     >
   </div>
@@ -40,7 +50,7 @@
 
   {#if isMenuOpen}
     <Modal {isMobile} onIsOpenToggle={toggleIsMenuOpen}>
-      <Navigation {isMobile} />
+      <Navigation />
     </Modal>
   {/if}
 </header>

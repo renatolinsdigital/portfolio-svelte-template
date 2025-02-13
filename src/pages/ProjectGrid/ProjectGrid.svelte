@@ -5,6 +5,7 @@
   import type { Project } from "../../domain/models/Project.model";
   import Pagination from "../../shared/components/Pagination/Pagination.svelte";
   import ProjectCard from "../../domain/components/ProjectCard/ProjectCard.svelte";
+  import BoxContainer from "../../shared/components/BoxContainer/BoxContainer.svelte";
 
   let currentPage = 1;
   const itemsPerPage = 6;
@@ -15,8 +16,8 @@
     projects = Array.from({ length: 25 }, (_, i) => ({
       id: i + 1,
       title: `Project ${i + 1}`,
-      description: `Description of project ${i + 1}`,
       image: "https://placehold.co/600x400",
+      description: `Description of project ${i + 1}`,
     }));
     updatePaginatedProjects();
   });
@@ -46,5 +47,7 @@
     />
   {/if}
 {:else}
-  <Text fontSizeName="huge">No projects to display</Text>
+  <BoxContainer justifyContent="center" padding="4rem 0 0">
+    <Text colorVariant="low-contrast">- No projects to display yet -</Text>
+  </BoxContainer>
 {/if}

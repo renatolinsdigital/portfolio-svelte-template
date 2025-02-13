@@ -25,6 +25,26 @@ npm install, npm run dev
 
 [TBD] create many page data by hand (including referencing images, by hand)
 
+### Tips on Expanding This Project
+
+- **Component Organization**: Maintain a clear distinction between domain-specific and shared components. Shared components should be independent of any domain logic and reusable across different projects. In contrast, domain components can focus on functionality tailored to this project without the need for reusability considerations.
+
+- **Utilizing BoxContainer**: When placing small elements (such as text or buttons) without a parent component, consider wrapping them in the `<BoxContainer>` component. This approach allows for better management of their positioning and appearance through various properties related to alignment, layout, and background color.
+
+- **Enhancing User Experience**: Consider implementing animations or transitions for interactive elements to improve user engagement. You can utilize Svelte's built-in transition features for smooth effects.
+
+- **Responsive Design**: Ensure that your components are responsive. Test your layout on various screen sizes and adjust styles accordingly to provide a seamless experience across devices. This project offers a **device** store with properties that might help.
+
+- **Accessibility**: Pay attention to accessibility standards. Use semantic HTML and ARIA attributes where necessary to make your application usable for all users.
+
+- **Performance Optimization**: Regularly review your components for performance. Use Svelte's reactive features efficiently and avoid unnecessary re-renders to keep your application fast.
+
+- **Documentation**: Keep your code well-documented. Use comments and README files to explain the purpose of your project, making it easier for others (or yourself in the future) to understand what is going on.
+
+- **Testing**: Implement testing for your components to ensure they work as expected. Consider using testing libraries compatible with Svelte to automate this process.
+
+- **Version Control**: Use version control systems like Git to track changes in your project. This practice helps in managing updates and collaborating with others effectively.
+
 ### Building and Hosting
 
 To build the project, you can run npm run build. To host the project you can use services like netlify. These services can host private projects that are in your github account, which is a fast and easy way to put your project online.

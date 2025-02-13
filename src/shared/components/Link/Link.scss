@@ -1,6 +1,11 @@
-.text {
+.link:link,
+.link:visited,
+.link:hover,
+.link:active {
   max-width: max-content;
-  color: var(--text-color);
+  color: var(--link-color);
+  transition: all 0.2s ease;
+
   &.bold {
     font-weight: bold;
   }
@@ -15,5 +20,18 @@
   }
   &.color-low-contrast {
     color: var(--text-low-contrast-variant-color);
+  }
+
+  svg,
+  path {
+    transition: all 0.2s ease;
+  }
+}
+
+.link:hover {
+  color: var(--link-color-hover);
+  svg,
+  path {
+    fill: var(--link-color-hover);
   }
 }

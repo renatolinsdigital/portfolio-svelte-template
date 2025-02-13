@@ -46,15 +46,18 @@
 /* Default */
 
 body {
+  // Texts and Links
   --text-color: var(--dark);
-  --text-primary-variation-color: var(--primary-dark);
-  --text-secondary-variation-color: var(--secondary-dark);
-  --text-tertiary-variation-color: var(--tertiary-dark);
-  --text-low-contrast-variation-color: var(--gray-bluish-stronger);
+
+  --text-primary-variant-color: var(--primary-dark);
+  --text-secondary-variant-color: var(--secondary-dark);
+  --text-tertiary-variant-color: var(--tertiary-dark);
+  --text-low-contrast-variant-color: var(--gray-bluish-stronger);
 
   --link-color: var(--primary-default);
   --link-color-hover: var(--primary-dark);
 
+  // Buttons
   --button-color: var(--dark);
   --button-color-hover: var(--secondary-darkest);
   --button-background-color: var(--gray-bluish-strong);
@@ -63,21 +66,37 @@ body {
   --button-disabled-color: var(--gray-4);
   --button-disabled-background-color: var(--gray-bluish-strong);
 
+  // Buttons Branded Variants
+  --button-primary-variant-color: var(--white);
+  --button-secondary-variant-color: var(--white);
+  --button-tertiary-variant-color: var(--dark);
+
+  --button-primary-variant-background-color: var(--primary-default);
+  --button-secondary-variant-background-color: var(--secondary-default);
+  --button-tertiary-variant-background-color: var(--tertiary-default);
+
+  --button-primary-variant-background-hover-color: var(--primary-dark);
+  --button-secondary-variant-background-hover-color: var(--secondary-dark);
+  --button-tertiary-variant-background-hover-color: var(--tertiary-dark);
+
+  // Elements in General
   --container-background-color: var(--gray-soft);
   --container-background-color-alternative: var(--gray-medium);
 }
 
 /* Dark */
 body.dark {
+  // Texts and Links
   --text-color: var(--gray-soft);
-  --text-primary-variation-color: var(--primary-light);
-  --text-secondary-variation-color: var(--secondary-lightest);
-  --text-tertiary-variation-color: var(--tertiary-lightest);
-  --text-low-contrast-variation-color: var(--secondary-light);
+  --text-primary-variant-color: var(--primary-light);
+  --text-secondary-variant-color: var(--secondary-lightest);
+  --text-tertiary-variant-color: var(--tertiary-lightest);
+  --text-low-contrast-variant-color: var(--secondary-light);
 
   --link-color: var(--white);
   --link-color-hover: var(--primary-light);
 
+  // Buttons
   --button-color: var(--gray-bluish);
   --button-color-hover: var(--gray-bluish-strong);
   --button-background-color: var(--primary-default);
@@ -86,6 +105,20 @@ body.dark {
   --button-disabled-color: var(--gray-2);
   --button-disabled-background-color: var(--primary-light);
 
+  // Buttons Branded Variants
+  --button-primary-variant-color: var(--white);
+  --button-secondary-variant-color: var(--white);
+  --button-tertiary-variant-color: var(--dark);
+
+  --button-primary-variant-background-color: var(--primary-default);
+  --button-secondary-variant-background-color: var(--secondary-default);
+  --button-tertiary-variant-background-color: var(--tertiary-default);
+
+  --button-primary-variant-background-hover-color: var(--primary-light);
+  --button-secondary-variant-background-hover-color: var(--secondary-light);
+  --button-tertiary-variant-background-hover-color: var(--tertiary-light);
+
+  // Elements in General
   --container-background-color: var(--secondary-dark);
   --container-background-color-alternative: var(--secondary-darkest);
 }

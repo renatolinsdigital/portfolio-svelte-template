@@ -17,23 +17,3 @@ body {
   color: var(--link-color);
   transition: all 0.2s ease-in-out;
 }
-
-.icon:hover {
-  color: var(--link-color-hover);
-  svg,
-  path {
-    fill: var(--link-color-hover);
-  }
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-  color: var(--link-color);
-  font-weight: bold;
-}
-
-a:hover {
-  color: var(--link-color-hover);
-}

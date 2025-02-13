@@ -9,8 +9,8 @@
 <div class="project-card">
   <img src={project.image} alt={project.title} />
   <!--TODO: This should be a link-->
-  <Text tag="h3" margin="1rem 1rem 0.5rem" variation="primary" isBold
+  <Text tag="h3" margin="0.4rem 0.4rem 0.4rem" colorVariant="primary" isBold
     >{project.title}</Text
   >
-  <Text tag="span" margin={{ bottom: "0.8rem" }}>{project.description}</Text>
+  <Text tag="span" margin="0 0.4rem 0.8rem">{project.description}</Text>
 </div>

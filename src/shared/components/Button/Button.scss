@@ -1,6 +1,7 @@
 .button {
   border: none;
   cursor: pointer;
+  user-select: none;
   font-weight: bold;
   font-size: 1.2rem;
   padding: 0.8rem 1rem;
@@ -14,21 +15,28 @@
     background-color: var(--button-background-color-hover);
   }
 
-  &:disabled {
-    cursor: not-allowed;
-    color: var(--button-disabled-color);
-    background-color: var(--button-disabled-background-color);
+  &.color-primary {
+    color: var(--button-primary-variant-color);
+    background-color: var(--button-primary-variant-background-color);
+    &:hover {
+      background-color: var(--button-primary-variant-background-hover-color);
+    }
   }
-  &.primary {
-    // tbd
+  &.color-secondary {
+    color: var(--button-secondary-variant-color);
+    background-color: var(--button-secondary-variant-background-color);
+    &:hover {
+      background-color: var(--button-secondary-variant-background-hover-color);
+    }
   }
-  &.secondary {
-    // tbd
+  &.color-tertiary {
+    color: var(--button-tertiary-variant-color);
+    background-color: var(--button-tertiary-variant-background-color);
+    &:hover {
+      background-color: var(--button-tertiary-variant-background-hover-color);
+    }
   }
-  &.tertiary {
-    // tbd
-  }
-  &.transparent {
+  &.color-transparent {
     min-width: 0;
     background-color: var(--button-transparent);
     &:hover {
@@ -49,5 +57,14 @@
   }
   &.min-width-220 {
     min-width: 220px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: var(--button-disabled-color);
+    background-color: var(--button-disabled-background-color);
+    &:hover {
+      background-color: var(--button-disabled-background-color);
+    }
   }
 }

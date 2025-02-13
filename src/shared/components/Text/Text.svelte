@@ -5,12 +5,12 @@
   import type { FontSizeName } from "./Text.model";
   export let fontSizeName: FontSizeName = "default";
   export let tag: "p" | "span" | "h1" | "h2" | "h3" = "p";
-  export let variation:
+  export let colorVariant:
     | "primary"
     | "secondary"
     | "tertiary"
     | "low-contrast"
-    | "none" = "none";
+    | "default" = "default";
 
   export let margin:
     | string
@@ -29,7 +29,7 @@
       ? padding
       : `${padding.top ?? "0"} ${padding.right ?? "0"} ${padding.bottom ?? "0"} ${padding.left ?? "0"}`;
 
-  const FontSizes: Record<FontSizeName, string> = {
+  const FONT_SIZES: Record<FontSizeName, string> = {
     smallest: "0.75rem",
     small: "0.875rem",
     default: "1rem",
@@ -43,8 +43,8 @@
 
 <svelte:element
   this={tag}
-  class={`text ${variation} ${customClass} ${isBold ? "bold" : ""}`}
-  style={`margin: ${dynamicMargin}; padding: ${dynamicPadding}; font-size: ${FontSizes[fontSizeName]};`}
+  class={`text color-${colorVariant} ${customClass} ${isBold ? "bold" : ""}`}
+  style={`margin: ${dynamicMargin}; padding: ${dynamicPadding}; font-size: ${FONT_SIZES[fontSizeName]};`}
 >
   <slot />
 </svelte:element>

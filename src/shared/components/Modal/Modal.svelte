@@ -18,7 +18,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-static-element-interactions -->
 <div
-  class="modal"
+  class="modal-container"
   class:mobile={isMobile}
   on:click={onIsOpenToggle}
   transition:fade={{ duration: 200 }}
