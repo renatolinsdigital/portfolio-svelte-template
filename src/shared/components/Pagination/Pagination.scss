@@ -1,24 +1,6 @@
 .pagination {
-  gap: 1rem;
+  gap: 0.8rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 1rem;
-
-  @media (max-width: 440px) {
-    button {
-      min-width: 80px;
-      font-size: 1rem;
-      border-radius: 0.3rem;
-      padding: 0.6rem 0.8rem;
-    }
-  }
-
-  .view-more {
-    opacity: 0;
-    transition: all 0.2s ease;
-    &.visible {
-      opacity: 1;
-    }
-  }
+  justify-content: center;
 }

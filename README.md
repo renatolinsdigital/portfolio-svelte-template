@@ -13,6 +13,14 @@ Styling: Sass
 
 ## Instructions for using this template
 
+It is advisable to have this skills
+
+- [HTML + CSS]
+- [Javascript]
+- [Sass]
+- [Typescript]
+- [Svelte]
+
 ### Running the project
 
 npm install, npm run dev
@@ -31,7 +39,7 @@ npm install, npm run dev
 
 - **Utilizing BoxContainer**: When placing small elements (such as text or buttons) without a parent component, consider wrapping them in the `<BoxContainer>` component. This approach allows for better management of their positioning and appearance through various properties related to alignment, layout, and background color.
 
-- **Enhancing User Experience**: Consider implementing animations or transitions for interactive elements to improve user engagement. You can utilize Svelte's built-in transition features for smooth effects.
+- **Design System**: This project is designed to integrate with a design system. If you have a theme and reusable design definitions (such as colors, typography, and iconography), you can replace these definitions with your own.
 
 - **Responsive Design**: Ensure that your components are responsive. Test your layout on various screen sizes and adjust styles accordingly to provide a seamless experience across devices. This project offers a **device** store with properties that might help.
 
