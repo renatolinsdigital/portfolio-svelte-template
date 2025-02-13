@@ -2,7 +2,7 @@
   import "./Header.scss";
   import { fade } from "svelte/transition";
   import svelteLogo from "../../../images/svelte.svg";
-  import { device } from "../../../stores/deviceStore";
+  import { device, application } from "../../../stores/";
   import DarkToggle from "../DarkToggle/DarkToggle.svelte";
   import Navigation from "../Navigation/Navigation.svelte";
   import Text from "../../../shared/components/Text/Text.svelte";
@@ -10,11 +10,11 @@
   import Modal from "../../../shared/components/Modal/Modal.svelte";
   import BurgerButton from "../../../shared/components/BurgerButton/BurgerButton.svelte";
 
-  let isMenuOpen = false;
   $: isMobile = $device.isMobile;
+  $: isModalOpen = $application.isModalOpen;
 
-  const toggleIsMenuOpen = () => {
-    isMenuOpen = !isMenuOpen;
+  const toggleIsMenuModalOpen = () => {
+    isModalOpen = !isModalOpen;
   };
 </script>
 
@@ -45,11 +45,11 @@
   </div>
 
   {#if isMobile}
-    <BurgerButton onClick={toggleIsMenuOpen} />
+    <BurgerButton onClick={toggleIsMenuModalOpen} />
   {/if}
 
-  {#if isMenuOpen}
-    <Modal {isMobile} onIsOpenToggle={toggleIsMenuOpen}>
+  {#if isModalOpen}
+    <Modal onIsOpenToggle={toggleIsMenuModalOpen}>
       <Navigation />
     </Modal>
   {/if}
