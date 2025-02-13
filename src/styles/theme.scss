@@ -33,6 +33,7 @@
   --gray-bluish: #ced1e9;
   --gray-bluish-strong: #d4d6e8;
   --gray-bluish-stronger: #898ebd;
+  --gray-bluish-strongest: #747bb7;
   --transparent: transparent;
 
   /* Semantic */
@@ -48,14 +49,19 @@
 body {
   // Texts and Links
   --text-color: var(--dark);
-
-  --text-primary-variant-color: var(--primary-dark);
-  --text-secondary-variant-color: var(--secondary-dark);
-  --text-tertiary-variant-color: var(--tertiary-dark);
-  --text-low-contrast-variant-color: var(--gray-bluish-stronger);
-
   --link-color: var(--primary-default);
   --link-color-hover: var(--primary-dark);
+
+  // Texts and Links Variants
+  --text-primary-variant-color: var(--primary-default);
+  --text-secondary-variant-color: var(--secondary-default);
+  --text-tertiary-variant-color: var(--tertiary-default);
+  --text-low-contrast-variant-color: var(--gray-bluish-stronger);
+
+  --link-primary-variant-hover-color: var(--primary-dark);
+  --link-secondary-variant-hover-color: var(--secondary-dark);
+  --link-tertiary-variant-hover-color: var(--tertiary-dark);
+  --link-low-contrast-variant-hover-color: var(--gray-bluish-strongest);
 
   // Buttons
   --button-color: var(--dark);
@@ -88,13 +94,19 @@ body {
 body.dark {
   // Texts and Links
   --text-color: var(--gray-soft);
-  --text-primary-variant-color: var(--primary-light);
-  --text-secondary-variant-color: var(--secondary-lightest);
-  --text-tertiary-variant-color: var(--tertiary-lightest);
-  --text-low-contrast-variant-color: var(--secondary-light);
-
   --link-color: var(--white);
   --link-color-hover: var(--primary-light);
+
+  // Texts and Links Variants
+  --text-primary-variant-color: var(--primary-light);
+  --text-secondary-variant-color: var(--secondary-light);
+  --text-tertiary-variant-color: var(--tertiary-light);
+  --text-low-contrast-variant-color: var(--secondary-light);
+
+  --link-primary-variant-hover-color: var(--primary-lightest);
+  --link-secondary-variant-hover-color: var(--secondary-lightest);
+  --link-tertiary-variant-hover-color: var(--tertiary-lightest);
+  --link-low-contrast-variant-hover-color: var(--secondary-lightest);
 
   // Buttons
   --button-color: var(--gray-bluish);

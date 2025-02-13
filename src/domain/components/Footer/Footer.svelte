@@ -17,6 +17,7 @@
     <Link
       target="_blank"
       rel="noopener noreferrer"
+      colorVariant="low-contrast"
       ariaLabel="LinkedIn Profile"
       href="https://www.linkedin.com/in/renatolinsdigital/"
     >
@@ -29,6 +30,7 @@
       target="_blank"
       ariaLabel="GitHub"
       rel="noopener noreferrer"
+      colorVariant="low-contrast"
       href="https://github.com/renatolinsdigital/"
     >
       <GitHub />
@@ -37,6 +39,7 @@
       target="_blank"
       rel="noopener noreferrer"
       ariaLabel="LinkedIn Profile"
+      colorVariant="low-contrast"
       href="https://www.linkedin.com/in/renatolinsdigital/"
     >
       <LinkedIn />

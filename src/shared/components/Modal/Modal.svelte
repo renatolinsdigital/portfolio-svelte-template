@@ -26,8 +26,8 @@
   <div class="modal-content" on:click|stopPropagation>
     <div class="modal-header">
       <Button
-        variant="transparent"
         onClick={onIsOpenToggle}
+        colorVariant="transparent"
         ariaLabel="Close navigation menu"
       >
         &#10006;

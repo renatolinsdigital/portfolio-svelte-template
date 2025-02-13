@@ -32,14 +32,14 @@
         class:mobile={isMobile}
       /></Link
     >
-    <Text tag="h1" fontSizeName="jumbo" margin={{ left: "1rem" }} isBold
+    <Text tag="h1" fontSizeName="jumbo" margin="0 0 0 1rem" isBold
       >Hi, I'm John Doe
-      <DarkToggle />
+      <!-- <DarkToggle /> -->
     </Text>
   </div>
 
   <div class="header-message" transition:fade={{ duration: 2000 }}>
-    <Text tag="h3" fontSizeName="large"
+    <Text tag="h3" fontSizeName="large" colorVariant="low-contrast"
       >Check out the projects I've been working on</Text
     >
   </div>

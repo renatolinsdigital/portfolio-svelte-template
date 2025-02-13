@@ -1,6 +1,5 @@
 .link:link,
 .link:visited,
-.link:hover,
 .link:active {
   max-width: max-content;
   color: var(--link-color);
@@ -9,29 +8,40 @@
   &.bold {
     font-weight: bold;
   }
+
+  &:hover {
+    color: var(--link-color-hover);
+  }
+
+  path {
+    transition: inherit;
+  }
+
   &.color-primary {
     color: var(--text-primary-variant-color);
+    &:hover {
+      color: var(--link-primary-variant-hover-color);
+    }
   }
+
   &.color-secondary {
     color: var(--text-secondary-variant-color);
+    &:hover {
+      color: var(--link-secondary-variant-hover-color);
+    }
   }
+
   &.color-tertiary {
     color: var(--text-tertiary-variant-color);
+    &:hover {
+      color: var(--link-tertiary-variant-hover-color);
+    }
   }
+
   &.color-low-contrast {
     color: var(--text-low-contrast-variant-color);
-  }
-
-  svg,
-  path {
-    transition: all 0.2s ease;
-  }
-}
-
-.link:hover {
-  color: var(--link-color-hover);
-  svg,
-  path {
-    fill: var(--link-color-hover);
+    &:hover {
+      color: var(--link-low-contrast-variant-hover-color);
+    }
   }
 }
