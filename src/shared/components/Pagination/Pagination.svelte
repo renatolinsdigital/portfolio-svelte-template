@@ -46,14 +46,19 @@
     onClick={() => changePage(currentPage - 1)}
     isDisabled={currentPage === 1}>Previous</Button
   >
-  <Text tag="span">Page {currentPage} of {totalPages}</Text>
+  <Text tag="span" fontSizeName="small">Page {currentPage} of {totalPages}</Text
+  >
   <Button
     minWidth="120"
     onClick={() => changePage(currentPage + 1)}
     isDisabled={currentPage === totalPages}>Next</Button
   >
 
-  <Text tag="span" customClass={`view-more ${hasPagesLeft ? "visible" : ""}`}>
+  <Text
+    tag="span"
+    customClass={`view-more ${hasPagesLeft ? "visible" : ""}`}
+    colorVariant="low-contrast"
+  >
     ...</Text
   >
 
@@ -63,7 +68,11 @@
     >
   {/each}
 
-  <Text tag="span" customClass={`view-more ${hasPagesRight ? "visible" : ""}`}>
+  <Text
+    tag="span"
+    customClass={`view-more ${hasPagesRight ? "visible" : ""}`}
+    colorVariant="low-contrast"
+  >
     ...
   </Text>
 </div>
