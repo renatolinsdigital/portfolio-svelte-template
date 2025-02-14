@@ -1,4 +1,4 @@
-import { defineConfig } from "vitest/config";
+import { defineConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import { svelteTesting } from "@testing-library/svelte/vite";
 
@@ -6,6 +6,7 @@ import { svelteTesting } from "@testing-library/svelte/vite";
 export default defineConfig({
   plugins: [svelte(), svelteTesting()],
   test: {
+    globals: true,
     environment: "jsdom",
   },
   resolve: process.env.VITEST

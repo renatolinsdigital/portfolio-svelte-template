@@ -1,7 +1,7 @@
 {
   "name": "svelte-portfolio-template",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/svelte": "^5.2.7",
     "@tsconfig/svelte": "^5.0.4",
     "jsdom": "^26.0.0",

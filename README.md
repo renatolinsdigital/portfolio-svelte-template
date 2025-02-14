@@ -10,6 +10,7 @@ Language: Typescript
 Front-end Framework: Svelte
 Bundler: Vite
 Styling: Sass
+Testing: Vitest + Svelte Testing Library
 
 ## Instructions for using this template
 
@@ -25,7 +26,7 @@ It is advisable to have this skills
 
 npm install, npm run dev
 
-### Updating appearence
+### Updating appearance
 
 [TBD] create your own theme and css variables (font, color) icons
 

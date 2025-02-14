@@ -8,7 +8,7 @@
 
 <div class="project-card" data-testid="project-card">
   <img src={project.image} alt={project.title} />
-  <!--TODO: This should be a link-->
+
   <Text tag="h3" margin="0.4rem 0.4rem 0.4rem" colorVariant="primary" isBold
     >{project.title}</Text
   >

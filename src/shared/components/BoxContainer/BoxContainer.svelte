@@ -2,10 +2,11 @@
   import { styleTrim } from "../../helpers/styleTrim";
 
   export let flex: number = 1;
+  export let className: string = "";
 
-  export let minWidth: number = 0;
+  export let minWidth: string = "0";
   export let minHeight: string = "auto";
-  export let maxWidth: string | undefined = undefined;
+  export let maxWidth: string = "none";
   export let maxHeight: string | undefined = undefined;
 
   export let isVisible: boolean = true;
@@ -16,15 +17,14 @@
   export let alignSelf: string | undefined = undefined;
 
   export let borderStyle: string = "solid";
-  export let borderColorName: string | undefined = undefined;
-  export let backgroundColorName: string | undefined = undefined;
-  export let verticalBreakPoint: string | undefined = undefined;
+  export let borderColor: string | undefined = undefined;
+  export let backgroundColor: string | undefined = undefined;
 
   export let gap: string | undefined = undefined;
-  export let top: string | undefined = undefined;
-  export let left: string | undefined = undefined;
-  export let right: string | undefined = undefined;
-  export let bottom: string | undefined = undefined;
+  export let top: string = "auto";
+  export let left: string = "auto";
+  export let right: string = "auto";
+  export let bottom: string = "auto";
 
   export let cursor: string | undefined = undefined;
 
@@ -40,7 +40,7 @@
   export let overflowY: string | undefined = undefined;
   export let transform: string | undefined = undefined;
 
-  export let borderRadius: string | number = 0;
+  export let borderRadius: string = "0";
   export let border: string | undefined = undefined;
   export let borderTop: string | undefined = undefined;
   export let borderLeft: string | undefined = undefined;
@@ -55,6 +55,7 @@
     | "baseline"
     | "flex-end"
     | "flex-start"
+    | "space-between"
     | undefined = undefined;
 
   export let justifyContent:
@@ -65,11 +66,12 @@
     | "baseline"
     | "flex-end"
     | "flex-start"
+    | "space-between"
     | undefined = undefined;
 </script>
 
 <div
-  class="box-container"
+  class={className}
   data-testid="box-container"
   style={styleTrim(`
     ${gap ? `gap: ${gap};` : ""}
@@ -102,11 +104,10 @@
     ${borderRight ? `border-right: ${borderRight};` : ""}
     ${borderBottom ? `border-bottom: ${borderBottom};` : ""}
     ${borderRadius ? `border-radius: ${borderRadius};` : ""}
-    ${borderColorName ? `border-color: ${borderColorName};` : ""}
+    ${borderColor ? `border-color: ${borderColor};` : ""}
     ${flexDirection ? `flex-direction: ${flexDirection};` : ""}
     ${justifyContent ? `justify-content: ${justifyContent};` : ""}
-    ${backgroundColorName ? `background-color: ${backgroundColorName};` : ""}
-    ${verticalBreakPoint ? `vertical-break-point: ${verticalBreakPoint};` : ""}
+    ${backgroundColor ? `background-color: ${backgroundColor};` : ""}
     display: ${isStretched ? "flex" : "block"};
     visibility: ${isVisible ? "visible" : "hidden"};
     flex-wrap: ${isFlexWrapping ? "wrap" : "nowrap"};
