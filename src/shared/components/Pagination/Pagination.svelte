@@ -1,7 +1,6 @@
 <script lang="ts">
   import "./Pagination.scss";
   import Button from "../Button/Button.svelte";
-  import { device } from "../../../stores/deviceStore";
 
   let currentPage = 1;
   const visibleGoToPages = 3;
@@ -9,7 +8,6 @@
   export let items: any[] = [];
   export let onPageChange: (page: number) => void;
 
-  $: isMobile = $device.isMobile;
   $: totalPages = Math.ceil(items.length / itemsPerPage);
 
   const changePage = (page: number) => {
@@ -38,13 +36,13 @@
     onClick={() => changePage(currentPage - 1)}
     isDisabled={currentPage === 1}>&lt;</Button
   >
-  {#if !isMobile}
+  <div class="visible-pages">
     {#each getVisiblePages() as page}
       <Button onClick={() => changePage(page)} isDisabled={currentPage === page}
         >{page}</Button
       >
     {/each}
-  {/if}
+  </div>
 
   <Button
     onClick={() => changePage(currentPage + 1)}

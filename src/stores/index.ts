@@ -1,2 +1,2 @@
-export { device } from "./deviceStore";
-export { application } from "./applicationStore";
+export { modalStore } from "./modalStore";
+export { deviceStore } from "./deviceStore";

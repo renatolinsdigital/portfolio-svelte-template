@@ -1,16 +1,11 @@
 <script lang="ts">
   import "./Modal.scss";
+  export let isMobile = false;
   import { fade } from "svelte/transition";
-  import { device } from "../../../stores/";
   import { onMount, onDestroy } from "svelte";
   import Button from "../Button/Button.svelte";
 
   export let onIsOpenToggle: () => void;
-
-  let isMobile: boolean;
-  const unsubscribe = device.subscribe((value) => {
-    isMobile = value.isMobile;
-  });
 
   onMount(() => {
     document.body.classList.add("no-scroll");
@@ -18,7 +13,6 @@
 
   onDestroy(() => {
     document.body.classList.remove("no-scroll");
-    unsubscribe();
   });
 
   function handleKeydown(e: KeyboardEvent) {

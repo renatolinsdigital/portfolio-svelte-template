@@ -2,20 +2,29 @@
   import "./Header.scss";
   import { fade } from "svelte/transition";
   import svelteLogo from "../../../images/svelte.svg";
-  import { device, application } from "../../../stores/";
+  import { deviceStore, modalStore } from "../../../stores/";
   import DarkToggle from "../DarkToggle/DarkToggle.svelte";
   import Navigation from "../Navigation/Navigation.svelte";
   import Text from "../../../shared/components/Text/Text.svelte";
   import Link from "../../../shared/components/Link/Link.svelte";
   import Modal from "../../../shared/components/Modal/Modal.svelte";
   import BurgerButton from "../../../shared/components/BurgerButton/BurgerButton.svelte";
+  import { onDestroy } from "svelte";
 
-  $: isMobile = $device.isMobile;
-  $: isModalOpen = $application.isModalOpen;
+  let isMobile = false;
+  const deviceUnsubscribe = deviceStore.subscribe((value) => {
+    isMobile = value.isMobile;
+  });
 
-  const toggleIsMenuModalOpen = () => {
-    isModalOpen = !isModalOpen;
-  };
+  let isModalOpen = false;
+  const modalUnsubscribe = modalStore.subscribe((value) => {
+    isModalOpen = value.isOpen;
+  });
+
+  onDestroy(() => {
+    deviceUnsubscribe();
+    modalUnsubscribe();
+  });
 </script>
 
 <header class="header-container">
@@ -45,11 +54,11 @@
   </div>
 
   {#if isMobile}
-    <BurgerButton onClick={toggleIsMenuModalOpen} />
+    <BurgerButton onClick={modalStore.onIsOpenToggle} />
   {/if}
 
   {#if isModalOpen}
-    <Modal onIsOpenToggle={toggleIsMenuModalOpen}>
+    <Modal {isMobile} onIsOpenToggle={modalStore.onIsOpenToggle}>
       <Navigation />
     </Modal>
   {/if}

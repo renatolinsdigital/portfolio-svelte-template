@@ -5,17 +5,18 @@ interface Device {
   screenWidth: number;
 }
 
-export const device = writable<Device>({
+const initialDeviceState: Device = {
   isMobile: window.innerWidth < 768,
   screenWidth: window.innerWidth,
-});
+};
+
+export const deviceStore = writable<Device>(initialDeviceState);
 
 const updateDevice = (): void => {
-  device.update((current) => ({
-    ...current,
-    isMobile: window.innerWidth < 768,
-    screenWidth: window.innerWidth,
-  }));
+  const isMobile = window.innerWidth < 768;
+  const screenWidth = window.innerWidth;
+
+  deviceStore.set({ isMobile, screenWidth });
 };
 
 updateDevice();

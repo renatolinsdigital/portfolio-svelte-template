@@ -1,9 +1,18 @@
 <script lang="ts">
   import "./Navigation.scss";
-  import { device } from "../../../stores/deviceStore";
+  import { onDestroy } from "svelte";
+  import { deviceStore } from "../../../stores/";
   import Link from "../../../shared/components/Link/Link.svelte";
 
-  $: isMobile = $device.isMobile;
+  let isMobile: boolean;
+
+  const deviceUnsubscribe = deviceStore.subscribe((value) => {
+    isMobile = value.isMobile;
+  });
+
+  onDestroy(() => {
+    deviceUnsubscribe();
+  });
 </script>
 
 <nav class="navigation" class:mobile={isMobile}>
