@@ -41,15 +41,13 @@ npm install, npm run dev
 
 - **Design System**: This project is designed to integrate with a design system. If you have a theme and reusable design definitions (such as colors, typography, and iconography), you can replace these definitions with your own.
 
-- **Responsive Design**: Ensure that your components are responsive. Test your layout on various screen sizes and adjust styles accordingly to provide a seamless experience across devices. This project offers a **device** store with properties that might help.
+- **Testing**: Implement tests for your components to ensure they function as expected, especially for domain components that are closely tied to your business. Shared components generally require less attention in testing, as they are potential candidates to be managed externally.
 
 - **Accessibility**: Pay attention to accessibility standards. Use semantic HTML and ARIA attributes where necessary to make your application usable for all users.
 
 - **Performance Optimization**: Regularly review your components for performance. Use Svelte's reactive features efficiently and avoid unnecessary re-renders to keep your application fast.
 
 - **Documentation**: Keep your code well-documented. Use comments and README files to explain the purpose of your project, making it easier for others (or yourself in the future) to understand what is going on.
-
-- **Testing**: Implement testing for your components to ensure they work as expected. Consider using testing libraries compatible with Svelte to automate this process.
 
 - **Version Control**: Use version control systems like Git to track changes in your project. This practice helps in managing updates and collaborating with others effectively.
 

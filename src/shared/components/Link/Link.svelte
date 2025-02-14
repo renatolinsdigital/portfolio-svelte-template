@@ -37,6 +37,7 @@
   {rel}
   {href}
   {target}
+  data-testid="link"
   aria-label={ariaLabel}
   class={`link color-${colorVariant} ${customClass} ${isBold ? "bold" : ""}`}
   style={`${margin ? `margin: ${margin};` : ""}${padding ? ` padding: ${padding};` : ""} font-size: ${FONT_SIZES[fontSizeName]};`}

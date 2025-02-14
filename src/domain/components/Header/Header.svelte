@@ -1,15 +1,14 @@
 <script lang="ts">
   import "./Header.scss";
+  import { onDestroy } from "svelte";
   import { fade } from "svelte/transition";
   import svelteLogo from "../../../images/svelte.svg";
   import { deviceStore, modalStore } from "../../../stores/";
-  import DarkToggle from "../DarkToggle/DarkToggle.svelte";
   import Navigation from "../Navigation/Navigation.svelte";
   import Text from "../../../shared/components/Text/Text.svelte";
   import Link from "../../../shared/components/Link/Link.svelte";
   import Modal from "../../../shared/components/Modal/Modal.svelte";
   import BurgerButton from "../../../shared/components/BurgerButton/BurgerButton.svelte";
-  import { onDestroy } from "svelte";
 
   let isMobile = false;
   const deviceUnsubscribe = deviceStore.subscribe((value) => {
@@ -27,7 +26,7 @@
   });
 </script>
 
-<header class="header-container">
+<header class="header-container" data-testid="header">
   {#if !isMobile}
     <Navigation />
   {/if}
@@ -54,7 +53,10 @@
   </div>
 
   {#if isMobile}
-    <BurgerButton onClick={modalStore.onIsOpenToggle} />
+    <BurgerButton
+      ariaLabel="Toggle navigation menu"
+      onClick={modalStore.onIsOpenToggle}
+    />
   {/if}
 
   {#if isModalOpen}

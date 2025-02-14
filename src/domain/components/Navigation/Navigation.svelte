@@ -15,7 +15,7 @@
   });
 </script>
 
-<nav class="navigation" class:mobile={isMobile}>
+<nav class="navigation" class:mobile={isMobile} data-testid="navigation">
   <ul>
     <li>
       <Link href="#projects" fontSizeName={isMobile ? "extraLarge" : "default"}

@@ -22,6 +22,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-static-element-interactions -->
 <div
+  data-testid="modal"
   class="modal-container"
   class:mobile={isMobile}
   on:click={onIsOpenToggle}

@@ -1,5 +1,7 @@
 <script lang="ts">
   export let onClick: () => void;
+  export let ariaLabel: string;
+
   import "./BurgerButton.scss";
 
   const strokeWidth: number = 4;
@@ -8,7 +10,8 @@
 <button
   on:click={onClick}
   class="burger-button"
-  aria-label="Open navigation menu"
+  aria-label={ariaLabel}
+  data-testid="burger-button"
 >
   <svg
     width="30"

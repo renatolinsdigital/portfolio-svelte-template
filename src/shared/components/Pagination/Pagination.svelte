@@ -28,7 +28,7 @@
   };
 </script>
 
-<div class="pagination">
+<div class="pagination" data-testid="pagination">
   <Button onClick={() => changePage(1)} isDisabled={currentPage === 1}
     >&lt;&lt;</Button
   >

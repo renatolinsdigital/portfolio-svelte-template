@@ -15,6 +15,7 @@
 </script>
 
 <button
+  data-testid="button"
   disabled={isDisabled}
   aria-label={ariaLabel}
   class={`button color-${colorVariant} min-width-${minWidth} size-${sizeVariant} ${isBold ? "bold" : ""}`}

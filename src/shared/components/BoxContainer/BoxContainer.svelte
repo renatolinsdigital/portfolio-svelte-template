@@ -70,6 +70,7 @@
 
 <div
   class="box-container"
+  data-testid="box-container"
   style={styleTrim(`
     ${gap ? `gap: ${gap};` : ""}
     ${top ? `top: ${top};` : ""}

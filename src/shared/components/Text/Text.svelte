@@ -29,6 +29,7 @@
 
 <svelte:element
   this={tag}
+  data-testid="text"
   class={`text color-${colorVariant} ${customClass} ${isBold ? "bold" : ""}`}
   style={`${margin ? `margin: ${margin};` : ""}${padding ? ` padding: ${padding};` : ""} font-size: ${FONT_SIZES[fontSizeName]};`}
 >

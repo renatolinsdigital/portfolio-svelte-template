@@ -9,7 +9,11 @@
   export let year = new Date().getFullYear();
 </script>
 
-<footer class="footer-container" transition:fade={{ duration: 300 }}>
+<footer
+  data-testid="footer"
+  class="footer-container"
+  transition:fade={{ duration: 300 }}
+>
   <Text colorVariant="low-contrast">© {year} Portfolio Website Template</Text>
   <Text customClass="separator" colorVariant="low-contrast">-</Text>
   <Text colorVariant="low-contrast">

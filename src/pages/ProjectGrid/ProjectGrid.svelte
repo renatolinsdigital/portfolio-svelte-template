@@ -34,7 +34,7 @@
 </script>
 
 {#if paginatedProjects.length > 0}
-  <div class="project-grid">
+  <div class="projects" data-testid="projects">
     {#each paginatedProjects as project}
       <ProjectCard {project} />
     {/each}

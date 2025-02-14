@@ -6,6 +6,7 @@
 
 <div
   class="page-container"
+  data-testid="page-container"
   transition:fly={{ y: 20, duration: 1000, easing: cubicOut }}
 >
   <slot></slot>
