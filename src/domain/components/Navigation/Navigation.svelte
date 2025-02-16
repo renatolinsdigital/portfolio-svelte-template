@@ -5,6 +5,7 @@
   import Link from "../../../shared/components/Link/Link.svelte";
 
   let isMobile: boolean;
+  export let dataTestId = "navigation";
 
   const deviceUnsubscribe = deviceStore.subscribe((value) => {
     isMobile = value.isMobile;
@@ -15,7 +16,7 @@
   });
 </script>
 
-<nav class="navigation" class:mobile={isMobile} data-testid="navigation">
+<nav class="navigation" class:mobile={isMobile} data-testid={dataTestId}>
   <ul>
     <li>
       <Link href="#projects" fontSizeName={isMobile ? "extraLarge" : "default"}

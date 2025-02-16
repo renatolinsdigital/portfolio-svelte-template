@@ -2,10 +2,12 @@
   import "./Button.scss";
   export let isBold = true;
   export let ariaLabel = "";
+  export let customClass = "";
   export let isDisabled = false;
-  export let minWidth: "0" | "90" | "120" | "150" | "180" | "220" = "0";
+  export let dataTestId = "button";
   export let onClick: () => void = () => {};
   export let sizeVariant: "default" | "small" | "big" = "default";
+  export let minWidth: "0" | "90" | "120" | "150" | "180" | "220" = "0";
   export let colorVariant:
     | "primary"
     | "secondary"
@@ -15,10 +17,10 @@
 </script>
 
 <button
-  data-testid="button"
   disabled={isDisabled}
   aria-label={ariaLabel}
-  class={`button color-${colorVariant} min-width-${minWidth} size-${sizeVariant} ${isBold ? "bold" : ""}`}
+  data-testid={dataTestId}
+  class={`button color-${colorVariant} min-width-${minWidth} size-${sizeVariant} ${isBold ? "bold" : ""} ${customClass}`}
   on:click={isDisabled ? null : onClick}
 >
   <slot></slot>

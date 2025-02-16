@@ -6,6 +6,7 @@
   const visibleGoToPages = 3;
   export let itemsPerPage = 0;
   export let items: any[] = [];
+  export let dataTestId = "pagination";
   export let onPageChange: (page: number) => void;
 
   $: totalPages = Math.ceil(items.length / itemsPerPage);
@@ -28,7 +29,7 @@
   };
 </script>
 
-<div class="pagination" data-testid="pagination">
+<div class="pagination" data-testid={dataTestId}>
   <Button onClick={() => changePage(1)} isDisabled={currentPage === 1}
     >&lt;&lt;</Button
   >

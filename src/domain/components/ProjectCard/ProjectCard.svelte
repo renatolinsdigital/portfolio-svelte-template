@@ -4,9 +4,10 @@
   import type { Project } from "../../models/Project.model";
 
   export let project: Project;
+  export let dataTestId = "project-card";
 </script>
 
-<div class="project-card" data-testid="project-card">
+<div class="project-card" data-testid={dataTestId}>
   <img src={project.image} alt={project.title} />
 
   <Text tag="h3" margin="0.4rem 0.4rem 0.4rem" colorVariant="primary" isBold

@@ -1,6 +1,8 @@
 <script lang="ts">
   import { styleTrim } from "../../helpers/styleTrim";
 
+  export let dataTestId = "box-container";
+
   export let flex: number = 1;
   export let className: string = "";
 
@@ -72,7 +74,7 @@
 
 <div
   class={className}
-  data-testid="box-container"
+  data-testid={dataTestId}
   style={styleTrim(`
     ${gap ? `gap: ${gap};` : ""}
     ${top ? `top: ${top};` : ""}

@@ -12,7 +12,11 @@ Bundler: Vite
 Styling: Sass
 Testing: Vitest + Svelte Testing Library
 
-## Instructions for using this template
+## Commands
+
+Running: npm run dev
+Building: npm run build
+Testing: npm run test
 
 It is advisable to have this skills
 
@@ -21,10 +25,6 @@ It is advisable to have this skills
 - [Sass]
 - [Typescript]
 - [Svelte]
-
-### Running the project
-
-npm install, npm run dev
 
 ### Updating appearance
 

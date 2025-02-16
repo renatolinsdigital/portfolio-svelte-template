@@ -6,11 +6,12 @@
   import Text from "../../../shared/components/Text/Text.svelte";
   import Link from "../../../shared/components/Link/Link.svelte";
 
+  export let dataTestId = "footer";
   export let year = new Date().getFullYear();
 </script>
 
 <footer
-  data-testid="footer"
+  data-testid={dataTestId}
   class="footer-container"
   transition:fade={{ duration: 300 }}
 >

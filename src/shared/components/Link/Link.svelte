@@ -4,6 +4,7 @@
 
   export let isBold = true;
   export let customClass = "";
+  export let dataTestId = "link";
   export let fontSizeName: FontSizeName = "default";
 
   export let colorVariant:
@@ -37,8 +38,8 @@
   {rel}
   {href}
   {target}
-  data-testid="link"
   aria-label={ariaLabel}
+  data-testid={dataTestId}
   class={`link color-${colorVariant} ${customClass} ${isBold ? "bold" : ""}`}
   style={`${margin ? `margin: ${margin};` : ""}${padding ? ` padding: ${padding};` : ""} font-size: ${FONT_SIZES[fontSizeName]};`}
 >

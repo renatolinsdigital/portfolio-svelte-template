@@ -1,6 +1,7 @@
 <script lang="ts">
   import "./Modal.scss";
   export let isMobile = false;
+  export let dataTestId = "modal";
   import { fade } from "svelte/transition";
   import { onMount, onDestroy } from "svelte";
   import Button from "../Button/Button.svelte";
@@ -22,9 +23,9 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-static-element-interactions -->
 <div
-  data-testid="modal"
   class="modal-container"
   class:mobile={isMobile}
+  data-testid={dataTestId}
   on:click={onIsOpenToggle}
   on:keydown={handleKeydown}
   transition:fade={{ duration: 200 }}

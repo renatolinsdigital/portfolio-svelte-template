@@ -11,6 +11,8 @@
   import BurgerButton from "../../../shared/components/BurgerButton/BurgerButton.svelte";
 
   let isMobile = false;
+  export let dataTestId = "header";
+
   const deviceUnsubscribe = deviceStore.subscribe((value) => {
     isMobile = value.isMobile;
   });
@@ -26,7 +28,7 @@
   });
 </script>
 
-<header class="header-container" data-testid="header">
+<header class="header-container" data-testid={dataTestId}>
   {#if !isMobile}
     <Navigation />
   {/if}
