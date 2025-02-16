@@ -1,6 +1,6 @@
+import { test, expect } from "vitest";
+import Navigation from "./Navigation.svelte";
 import { render, screen, fireEvent } from "@testing-library/svelte";
-import { describe, test, expect } from "vitest";
-import Navigation from "./Navigation.svelte"; // Adjust the path if necessary
 
 test("renders navigation links", () => {
   render(Navigation);

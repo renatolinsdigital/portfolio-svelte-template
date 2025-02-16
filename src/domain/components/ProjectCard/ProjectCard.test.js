@@ -1,6 +1,6 @@
-import { render } from "@testing-library/svelte";
 import { expect, test } from "vitest";
 import ProjectCard from "./ProjectCard.svelte";
+import { render } from "@testing-library/svelte";
 
 test("ProjectCard renders correctly", () => {
   const project = {

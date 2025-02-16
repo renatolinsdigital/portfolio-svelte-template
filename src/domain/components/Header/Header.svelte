@@ -3,21 +3,21 @@
   import { onDestroy } from "svelte";
   import { fade } from "svelte/transition";
   import svelteLogo from "../../../images/svelte.svg";
-  import { deviceStore, modalStore } from "../../../stores/";
   import Navigation from "../Navigation/Navigation.svelte";
+  import { deviceStore, modalStore } from "../../../stores/";
   import Text from "../../../shared/components/Text/Text.svelte";
   import Link from "../../../shared/components/Link/Link.svelte";
   import Modal from "../../../shared/components/Modal/Modal.svelte";
   import BurgerButton from "../../../shared/components/BurgerButton/BurgerButton.svelte";
 
   let isMobile = false;
+  let isModalOpen = false;
   export let dataTestId = "header";
 
   const deviceUnsubscribe = deviceStore.subscribe((value) => {
     isMobile = value.isMobile;
   });
 
-  let isModalOpen = false;
   const modalUnsubscribe = modalStore.subscribe((value) => {
     isModalOpen = value.isOpen;
   });
@@ -62,7 +62,7 @@
   {/if}
 
   {#if isModalOpen}
-    <Modal {isMobile} onIsOpenToggle={modalStore.onIsOpenToggle}>
+    <Modal {isMobile} onClose={modalStore.onClose}>
       <Navigation />
     </Modal>
   {/if}

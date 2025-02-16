@@ -12,14 +12,14 @@ const onIsOpenToggle = () => {
   update((current) => ({ isOpen: !current.isOpen }));
 };
 
-const closeModal = () => {
+const onClose = () => {
   set({ isOpen: false });
 };
 
 export const modalStore = {
   set,
   update,
+  onClose,
   subscribe,
-  closeModal,
   onIsOpenToggle,
 };
