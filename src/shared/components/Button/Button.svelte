@@ -6,6 +6,7 @@
   export let isDisabled = false;
   export let dataTestId = "button";
   export let onClick: () => void = () => {};
+  export let type: "button" | "submit" | "reset" = "button";
   export let sizeVariant: "default" | "small" | "big" = "default";
   export let minWidth: "0" | "90" | "120" | "150" | "180" | "220" = "0";
   export let colorVariant:
@@ -17,6 +18,7 @@
 </script>
 
 <button
+  {type}
   disabled={isDisabled}
   aria-label={ariaLabel}
   data-testid={dataTestId}
