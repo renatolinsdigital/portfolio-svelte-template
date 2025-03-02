@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import Button from "./Button.svelte";
-import ButtonWrapper from "./ButtonWrapper.svelte";
 import { expect, test, vi } from "vitest";
+import ButtonWrapper from "./ButtonWrapper.svelte";
 import { render, screen } from "@testing-library/svelte";
 
 test("Button renders correctly", () => {

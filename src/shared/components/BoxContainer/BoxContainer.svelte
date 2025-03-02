@@ -5,30 +5,29 @@
 
   export let flex: number = 1;
   export let className: string = "";
+  export let cursor: string | undefined = undefined;
 
   export let minWidth: string = "0";
-  export let minHeight: string = "auto";
   export let maxWidth: string = "none";
+  export let minHeight: string = "auto";
   export let maxHeight: string | undefined = undefined;
+
+  export let top: string = "auto";
+  export let left: string = "auto";
+  export let right: string = "auto";
+  export let bottom: string = "auto";
+  export let gap: string | undefined = undefined;
 
   export let isVisible: boolean = true;
   export let isStretched: boolean = true;
-  export let flexDirection: string = "row";
   export let position: string = "relative";
+  export let flexDirection: string = "row";
   export let isFlexWrapping: boolean = false;
   export let alignSelf: string | undefined = undefined;
 
   export let borderStyle: string = "solid";
   export let borderColor: string | undefined = undefined;
   export let backgroundColor: string | undefined = undefined;
-
-  export let gap: string | undefined = undefined;
-  export let top: string = "auto";
-  export let left: string = "auto";
-  export let right: string = "auto";
-  export let bottom: string = "auto";
-
-  export let cursor: string | undefined = undefined;
 
   export let margin: string | undefined = undefined;
   export let padding: string | undefined = undefined;

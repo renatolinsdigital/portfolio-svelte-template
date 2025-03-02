@@ -2,11 +2,11 @@
   import "./Text.scss";
   export let dataTestId = "text";
 
-  export let isBold = false;
-  export let customClass = "";
-  export let margin: string | undefined = undefined;
-  export let padding: string | undefined = undefined;
-  export let tag: "p" | "span" | "h1" | "h2" | "h3" = "p";
+  export let isBold: boolean = false;
+  export let customClass: string = "";
+  export let margin: string = "";
+  export let padding: string = "";
+  export let tag: "p" | "span" | "h1" | "h2" | "h3" = "span";
   export let fontSizeName:
     | "smallest"
     | "small"
