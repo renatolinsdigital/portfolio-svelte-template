@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import "./PageContainer.scss";
   import { fly } from "svelte/transition";
   import { cubicOut } from "svelte/easing";
