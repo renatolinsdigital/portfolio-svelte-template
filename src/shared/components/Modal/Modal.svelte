@@ -36,6 +36,7 @@
     <div class="modal-header">
       <Button
         onClick={onClose}
+        dataTestId="modal-close"
         colorVariant="transparent"
         ariaLabel="Close navigation menu"
       >

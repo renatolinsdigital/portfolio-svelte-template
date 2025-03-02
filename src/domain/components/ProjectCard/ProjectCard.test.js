@@ -18,19 +18,3 @@ test("ProjectCard render properties correctly", () => {
   expect(getByText("Test Project")).toBeTruthy();
   expect(getByText("This is a test project description.")).toBeTruthy();
 });
-
-// test("ProjectCard does not render if project is not provided", () => {
-//   const { queryByTestId } = render(ProjectCard);
-
-//   expect(queryByTestId("project-card")).toBeNull();
-// });
-
-// test("ProjectCard renders correctly with empty project", () => {
-//   const project = {};
-
-//   const { queryByTestId } = render(ProjectCard, {
-//     props: { project },
-//   });
-
-//   expect(queryByTestId("project-card")).toBeTruthy();
-// });
