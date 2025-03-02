@@ -8,7 +8,7 @@ test("BurgerButton renders and displays burger icon correctly", () => {
   expect(screen.getByTestId("burger-button")).toBeInTheDocument();
 });
 
-test("BurgerButton onClick function is working", () => {
+test("BurgerButton onClick function is working and ariaLabel is correctly applied", () => {
   const mockOnClick = vi.fn();
   render(BurgerButton, {
     props: {
@@ -18,4 +18,8 @@ test("BurgerButton onClick function is working", () => {
   });
   screen.getByTestId("burger-button").click();
   expect(mockOnClick).toHaveBeenCalled();
+  expect(screen.getByTestId("burger-button")).toHaveAttribute(
+    "aria-label",
+    "Toggle navigation menu"
+  );
 });
