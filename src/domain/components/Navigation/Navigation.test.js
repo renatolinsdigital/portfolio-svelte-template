@@ -2,7 +2,7 @@ import { test, expect } from "vitest";
 import Navigation from "./Navigation.svelte";
 import { render, screen, fireEvent } from "@testing-library/svelte";
 
-test("renders navigation links", () => {
+test("It renders navigation links", () => {
   render(Navigation);
 
   const projectsLink = screen.getByText(/projects/i);
@@ -14,7 +14,7 @@ test("renders navigation links", () => {
   expect(contactLink).toBeTruthy();
 });
 
-test("navigates to the correct section when a link is clicked", async () => {
+test("It navigates correctly when a link is clicked", async () => {
   render(Navigation);
 
   const projectsLink = screen.getByText(/projects/i);
