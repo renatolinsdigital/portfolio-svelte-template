@@ -14,7 +14,9 @@
   const changePage = (page: number) => {
     if (page >= 1 && page <= totalPages) {
       currentPage = page;
-      onPageChange(currentPage);
+      if (typeof onPageChange === "function") {
+        onPageChange(currentPage);
+      }
     }
   };
 
